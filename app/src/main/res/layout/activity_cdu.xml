@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerHorizontal="false"
+    android:layout_centerInParent="false"
+    android:layout_centerVertical="false"
+    tools:context="com.dogroll.admin.vetlauncher.CDU">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Source"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ketamine"
+            style="@style/WrittenText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="@string/diazepam"
+            style="@style/WrittenText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="@string/pentobarb_300"
+            style="@style/WrittenText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:text="@string/pentobarb_500"
+            style="@style/WrittenText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:text="@string/xylaket"
+            style="@style/WrittenText" />
+
+        <TextView
+            android:id="@+id/K_vol_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:ems="3"
+            android:gravity="center"
+            style="@style/WrittenText"/>
+
+        <TextView
+            android:id="@+id/P_vol_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:ems="3"
+            android:gravity="center"
+            style="@style/WrittenText"/>
+
+        <TextView
+            android:id="@+id/P300_vol_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:ems="3"
+            android:gravity="center"
+            style="@style/WrittenText"/>
+
+        <TextView
+            android:id="@+id/P500_vol_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:ems="3"
+            android:gravity="center"
+            style="@style/WrittenText"/>
+
+        <TextView
+            android:id="@+id/X_vol_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:ems="3"
+            android:gravity="center"
+            style="@style/WrittenText"/>
+
+        <EditText
+            android:id="@+id/editTextK"
+            android:hint="@string/mls"
+            android:autofillHints=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            tools:ignore="UnusedAttribute"
+            style="@style/WrittenText"/>
+
+        <EditText
+            android:id="@+id/editTextPam"
+            android:hint="@string/mls"
+            android:autofillHints=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            tools:ignore="UnusedAttribute"
+            style="@style/WrittenText"/>
+
+        <EditText
+            android:id="@+id/editTextP300"
+            android:hint="@string/mls"
+            android:autofillHints=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            tools:ignore="UnusedAttribute"
+            style="@style/WrittenText"/>
+
+        <EditText
+            android:id="@+id/editTextP500"
+            android:hint="@string/mls"
+            android:autofillHints=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            tools:ignore="UnusedAttribute"
+            style="@style/WrittenText"/>
+
+        <EditText
+            android:id="@+id/editTextXyl"
+            android:hint="@string/mls"
+            android:autofillHints=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="4"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            tools:ignore="UnusedAttribute"
+            style="@style/WrittenText"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/Source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/WrittenText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/controlled_drug_used_for" />
+
+        <Spinner
+            android:id="@+id/cduseSpinner"
+            style="@style/spinner_style"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:entries="@array/cdUse" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cdEmailBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RedButton"
+            android:text="@string/to_email" />
+
+        <Button
+            android:id="@+id/cdSavebtn"
+            style="@style/RedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

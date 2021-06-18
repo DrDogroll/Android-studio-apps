@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="VetGreen">#07550C</color>
+    <color name="BloodRed">#f20a19</color>
+    <color name="VetGreenPrim">#0a7b11</color>
+    <color name="BCSBlue">#2196F3</color>
+    <color name="ButtonBackground">#00FFFFFF</color>
+    <color name="TitleBarText">#FFFFFF</color>
+    <color name="_2_5">#F44336</color>
+    <color name="_3_0">#E91E63</color>
+    <color name="_3_5">#9C27B0</color>
+    <color name="_4_0">#673AB7</color>
+    <color name="_4_5">#2196F3</color>
+    <color name="_5_0">#009688</color>
+    <color name="_5_5">#4CAF50</color>
+    <color name="_6_0">#CDDC39</color>
+    <color name="_6_5">#FF9800</color>
+    <color name="warningBackground">#97FB0000</color>
+</resources>

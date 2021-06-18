@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cpdView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    tools:context=".CPDEntry">
+
+    <ScrollView
+        android:id="@+id/cpdEntryScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/cpdEntryLinear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <LinearLayout
+                android:id="@+id/cpdEntryLinear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/cpdEntryLinear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cpdEntryTVDate"
+                        style="@style/WrittenText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="center_horizontal"
+                        android:inputType="none"
+                        android:text="@string/select_date"
+                        tools:ignore="Autofill,LabelFor" />
+
+                    <ImageButton
+                        android:id="@+id/cpdEntryBTNDate"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/date_button"
+                        android:src="@android:drawable/ic_menu_my_calendar"
+                        android:tint="#F3DF0B0B" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/cpdEntryETTitle"
+                    style="@style/WrittenText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/title_of_cpd_record"
+                    android:inputType="text"
+                    tools:ignore="AutoFill" />
+
+                <EditText
+                    android:id="@+id/cpdEntryETProvider"
+                    style="@style/WrittenText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/provider_or_location"
+                    android:inputType="text"
+                    tools:ignore="AutoFill" />
+
+                <EditText
+                    android:id="@+id/cpdEntryETDescription"
+                    style="@style/WrittenText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine"
+                    tools:ignore="AutoFill" />
+
+                <RadioGroup
+                    android:id="@+id/cpdEntryRGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/cpdEntryRBtnCLA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/cla"
+                        android:text="@string/collegial_learning" />
+
+                    <RadioButton
+                        android:id="@+id/cpdEntryRBtnCVE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/cve"
+                        android:text="@string/continuing_veterinary_ed" />
+
+                    <RadioButton
+                        android:id="@+id/cpdEntryRBtnSDL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/sdl"
+                        android:text="@string/self_directed_learning" />
+
+                </RadioGroup>
+
+                <Spinner
+                    android:id="@+id/cpdEntrySpinner"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        style="@style/WrittenText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/hours" />
+
+                    <EditText
+                        android:id="@+id/cpdEntryETHours"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="numberDecimal"
+                        tools:ignore="AutoFill,LabelFor" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/WrittenText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/points" />
+
+                    <EditText
+                        android:id="@+id/cpdEntryETPoints"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="none"
+                        tools:ignore="AutoFill,LabelFor" />
+                </LinearLayout>
+
+            </LinearLayout>
+                <TableLayout
+                    android:id="@+id/cpdEntryTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/cpdEntryTVSubCatLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/activities_such_as"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/inflateSubCatExamples"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/cpdEntryTVEvidenceLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/evidence_such_as"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/inflateEvidenceExamples"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7" />
+                    </TableRow>
+
+                </TableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cpdEntryLinear4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    style="@style/WrittenText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_method_of_verification_nad_or_evidence_is" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <EditText
+                        android:id="@+id/cpdEntryETEvidence"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:gravity="center_horizontal"
+                        android:inputType="text"
+                        tools:ignore="AutoFill,LabelFor" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/cpdSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/reflective_record"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLReflective"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        style="@style/WrittenText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learning_outcomes_what_did_you_learn_or_teach" />
+
+                    <EditText
+                        android:id="@+id/cpdEntryETLearningOutcomes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textMultiLine"
+                        tools:ignore="AutoFill,LabelFor" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        style="@style/WrittenText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/impact_how_does_this_learning_affect_my_work" />
+
+                    <EditText
+                        android:id="@+id/cpdEntryETImpact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textMultiLine"
+                        tools:ignore="AutoFill,LabelFor" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/cpdEntryLinearBTNS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/cpdEntryPDFBTN"
+                    style="@style/RedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/print_to_pdf" />
+
+                <Button
+                    android:id="@+id/cpdEntryJPGBTN"
+                    style="@style/RedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/save_as_image" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

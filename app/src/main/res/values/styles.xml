@@ -1,0 +1,61 @@
+<resources>
+    <style name="WrittenText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="WrittenClickableText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/BloodRed</item>
+    </style>
+    <style name="RedButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/ButtonBackground</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="Button" parent="Widget.AppCompat.Button" >
+        <item name="backgroundTint">@color/BCSBlue</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="RecyclerTheme">
+        <item name="android:background">@drawable/border</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/VetGreenPrim</item>
+        <item name="colorPrimaryDark">@color/VetGreen</item>
+        <item name="colorAccent">@color/BloodRed</item>
+        <item name="windowNoTitle">false</item>
+        <item name="windowActionBar">true</item>
+
+    </style>
+    <style name="MainActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        //for MainActivity - some sort of bug
+        <item name="colorPrimary">@color/VetGreenPrim</item>
+        <item name="colorPrimaryDark">@color/VetGreen</item>
+        <item name="colorAccent">@color/BloodRed</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleBackgroundStyle">@style/windowTitleBackground</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColorPrimary">@color/TitleBarText</item>
+    </style>
+    <style name="windowTitleBackground">
+        <item name="android:background">@color/VetGreenPrim</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/gradient_spinner</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:popupBackground">#DFFFFFFF</item>
+    </style>
+
+
+</resources>

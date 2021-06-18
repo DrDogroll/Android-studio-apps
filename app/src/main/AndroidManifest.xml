@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dogroll.admin.vetlauncher">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/vetlauncher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/vetlauncher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".CPDRecord"/>
+        <activity android:name=".CPDEntry" />
+        <activity android:name=".ContinuingPD" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dogroll.admin.vetlauncher.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <service
+            android:name=".UpdateCheckService"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/MainActivityTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CDU" />
+        <activity android:name=".UploadStocktake" />
+        <activity android:name=".clients" />
+        <activity android:name=".VetNotifications" />
+        <activity android:name=".BarcodeScanner" />
+        <activity android:name=".BCSCalc" />
+        <activity android:name=".clinicalnotes" />
+        <activity android:name=".Stocktake" />
+        <activity android:name=".setting" />
+        <activity android:name=".Visit" />
+        <activity android:name=".EditVisit" />
+        <activity android:name=".diary" />
+        <activity android:name=".BCSSummary" />
+        <activity android:name=".BCSLaunch" />
+        <activity android:name=".about" />
+        <activity android:name=".departmentTransfer" />
+        <activity android:name=".Reminders" />
+    </application>
+
+</manifest>

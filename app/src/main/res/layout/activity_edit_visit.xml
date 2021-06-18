@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editorRelativeL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <GridLayout
+        android:id="@+id/editorGridinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editorTextClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:ems="10"
+            android:hint="@string/client_name_hint"
+            android:inputType="textPersonName|textCapWords"
+            tools:ignore="Autofill"
+            style="@style/WrittenText"/>
+
+        <EditText
+            android:id="@+id/editorTextAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:ems="10"
+            android:hint="@string/animal_name_hint"
+            android:inputType="textPersonName|textCapWords"
+            tools:ignore="Autofill"
+            style="@style/WrittenText"/>
+
+        <TextView
+            android:id="@+id/editorclientTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="@string/client_name"
+            style="@style/WrittenText"/>
+
+        <TextView
+            android:id="@+id/editoranimalTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="@string/animal"
+            style="@style/WrittenText"/>
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:text="@string/date_used"
+            style="@style/WrittenText"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/editorlinearLmid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/Linearbottom"
+        android:layout_below="@id/editorGridinfo"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+
+        <TextView
+            android:id="@+id/editorCRTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/clinical_record"
+            style="@style/WrittenText"/>
+
+        <EditText
+            android:id="@+id/editorTextCR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="start"
+            android:inputType="textMultiLine|textCapSentences"
+            tools:ignore="Autofill,LabelFor"
+            style="@style/WrittenText"/>
+
+        <TextView
+            android:id="@+id/editormedsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/medications_used"
+            style="@style/WrittenText"/>
+
+        <EditText
+            android:id="@+id/editorTextMed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="start"
+            android:inputType="textMultiLine|textCapSentences"
+            tools:ignore="Autofill,LabelFor"
+            style="@style/WrittenText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linearbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/EDITORbtn"
+            style="@style/RedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/unlock"
+            />
+
+        <Button
+            android:id="@+id/editorDeleteBTN"
+            style="@style/RedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/delete" />
+
+        <Button
+            android:id="@+id/editorSaveBTN"
+            style="@style/RedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/editorEmailBTN"
+            style="@style/RedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/to_email" />
+    </LinearLayout>
+</RelativeLayout>

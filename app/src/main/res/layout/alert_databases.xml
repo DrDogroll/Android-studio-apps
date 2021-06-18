@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/alertDatabaseTitle"
+            style="@style/WrittenText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/alertDatabaseMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/WrittenText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:gravity="center_horizontal"
+            android:text="@string/function" />
+
+        <RadioGroup
+            android:id="@+id/actionGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="0dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp">
+
+            <RadioButton
+                android:id="@+id/aDEXDAI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/export_diary" />
+
+            <RadioButton
+                android:id="@+id/aDIMDAI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/import_diary" />
+
+            <RadioButton
+                android:id="@+id/aDDELDAI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_diary" />
+
+            <RadioButton
+                android:id="@+id/aDEXBCS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/export_bcs" />
+
+            <RadioButton
+                android:id="@+id/aDIMBCS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/import_bcs" />
+
+            <RadioButton
+                android:id="@+id/aDDELBCS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_bcs" />
+
+            <RadioButton
+                android:id="@+id/aDEXCPD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/export_cpd" />
+
+            <RadioButton
+                android:id="@+id/aDIMCPD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/import_cpd" />
+
+            <RadioButton
+                android:id="@+id/aDDELCPD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_cpd" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnAlertDatabase"
+            style="@style/RedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/execute" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
